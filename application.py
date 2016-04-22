@@ -38,7 +38,7 @@ def index():
             db.session.close()
         except:
             db.session.rollback()
-        return render_template('thanks.html', notes=form1.dbNotes.data, test_num=test_number)
+        return render_template('thanks.html', notes=form1.dbNotes.data)
 
     if request.method == 'POST' and form2.validate():
         try:
